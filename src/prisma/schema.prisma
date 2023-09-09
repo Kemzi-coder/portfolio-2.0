@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id             Int              @id @default(autoincrement())
+  Category       ProjectCategory  @relation(fields: [categoryId], references: [id])
+  categoryId     Int
+  name           String           @unique
+  description    String
+  url            String           @unique
+  repoUrl        String           @unique
+  startDate      DateTime
+  endDate        DateTime
+  createdAt      DateTime         @default(now())
+  ProjectsSkills ProjectsSkills[]
+}
+
+model ProjectCategory {
+  id        Int       @id @default(autoincrement())
+  name      String    @unique
+  createdAt DateTime  @default(now())
+  Project   Project[]
+}
+
+model Skill {
+  id             Int              @id @default(autoincrement())
+  name           String           @unique
+  createdAt      DateTime         @default(now())
+  ProjectsSkills ProjectsSkills[]
+}
+
+model ProjectsSkills {
+  id        Int      @id @default(autoincrement())
+  Project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId Int
+  Skill     Skill    @relation(fields: [skillId], references: [id], onDelete: Cascade)
+  skillId   Int
+  createdAt DateTime @default(now())
+}

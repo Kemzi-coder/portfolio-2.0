@@ -8,9 +8,14 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore ."
+    "format:fix": "prettier --write --ignore-path .gitignore .",
+    "prisma:generate": "dotenv -e .env.local -- npx prisma generate"
+  },
+  "prisma": {
+    "schema": "src/prisma/schema.prisma"
   },
   "dependencies": {
+    "@prisma/client": "^5.2.0",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
@@ -22,8 +27,10 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "dotenv-cli": "^7.3.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "prisma": "^5.2.0"
   }
 }
