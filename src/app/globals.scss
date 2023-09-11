@@ -1,0 +1,24 @@
+@import "./vars.module";
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+}
+
+a {
+	cursor: pointer;
+}
+
+body {
+	font-size: $font-size-md;
+	font-weight: 500;
+	letter-spacing: 0.2px;
+	color: $text-primary-color;
+	background-color: $background-main-color;
+}

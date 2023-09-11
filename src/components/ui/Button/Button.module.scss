@@ -1,0 +1,36 @@
+@import "@/app/vars.module";
+
+.button {
+	display: inline-block;
+	border-radius: $border-radius-main;
+	padding: $spacing-md $spacing-xl;
+	transition: all $transition-main;
+	font-weight: 600;
+}
+
+.button.primary {
+	color: $primary-contrast-color;
+	background-color: $primary-main-color;
+	box-shadow: $box-shadow-main;
+
+	&:hover {
+		background: darken($primary-main-color, 15%);
+		box-shadow: none;
+	}
+
+	&:disabled {
+		background: darken($primary-main-color, 15%);
+		box-shadow: none;
+	}
+}
+
+.button.outline {
+	background-color: $background-main-color;
+	border: 1px solid $secondary-main-color;
+	color: $background-contrast-color;
+
+	&:hover {
+		background: $secondary-main-color;
+		color: $secondary-contrast-color;
+	}
+}
