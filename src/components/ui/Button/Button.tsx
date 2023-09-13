@@ -1,5 +1,6 @@
 import classNames from "classnames";
-import React, {ButtonHTMLAttributes, FC, forwardRef} from "react";
+import {ButtonHTMLAttributes, forwardRef} from "react";
+import Typography from "../Typography/Typography";
 import styles from "./Button.module.scss";
 
 type Variant = "primary" | "outline";
@@ -17,10 +18,17 @@ const Button = forwardRef<HTMLButtonElement, Props>(
 
 		return (
 			<button
+				ref={ref}
 				className={classNames(styles.button, classNameByVariant, className)}
 				type="button"
 				{...rest}>
-				{children}
+				<Typography
+					color="primary"
+					colorVariant="contrast"
+					variant="button"
+					noWrap>
+					{children}
+				</Typography>
 			</button>
 		);
 	}

@@ -1,0 +1,13 @@
+@import "@/app/vars.module";
+
+.card {
+	text-align: center;
+	background-color: $surface-main-color;
+	padding: $spacing-xxl;
+	transition: background-color $transition-main;
+
+	&:hover {
+		color: $primary-contrast-color;
+		background-color: $primary-main-color;
+	}
+}

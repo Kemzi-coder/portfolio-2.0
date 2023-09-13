@@ -1,0 +1,112 @@
+@import "@/app/vars.module";
+
+.typography--variant-h1 {
+	font-size: $font-size-ultramega;
+	font-weight: 700;
+}
+
+.typography--variant-h2 {
+	font-size: $font-size-mega;
+	font-weight: 700;
+}
+
+.typography--variant-h3 {
+	font-size: $font-size-xxxl;
+	font-weight: 700;
+}
+
+.typography--variant-h4 {
+	font-size: $font-size-xxl;
+	font-weight: 700;
+}
+
+.typography--variant-h5 {
+	font-size: $font-size-xl;
+	font-weight: 700;
+}
+
+.typography--variant-h6 {
+	font-size: $font-size-lg;
+	font-weight: 700;
+}
+
+.typography--variant-subheading1 {
+	font-size: $font-size-md;
+	font-weight: 700;
+}
+
+.typography--variant-subheading2 {
+	font-size: $font-size-sm;
+	font-weight: 700;
+}
+
+.typography--variant-body1 {
+	font-size: $font-size-md;
+	font-weight: 500;
+}
+
+.typography--variant-body2 {
+	font-size: $font-size-sm;
+	font-weight: 500;
+}
+
+.typography--variant-button {
+	font-size: $font-size-md;
+	font-weight: 600;
+}
+
+.typography--variant-link {
+	font-size: $font-size-md;
+	font-weight: 600;
+}
+
+.typography--variant-tab {
+	font-size: $font-size-md;
+	font-weight: 600;
+}
+
+.typography--color-primary {
+	color: $primary-main-color;
+
+	&.typography--color-variant-contrast {
+		color: $primary-contrast-color;
+	}
+}
+
+.typography--color-secondary {
+	color: $secondary-main-color;
+
+	&.typography--color-variant-contrast {
+		color: $secondary-contrast-color;
+	}
+}
+
+.typography--color-surface {
+	color: $surface-main-color;
+
+	&.typography--color-variant-contrast {
+		color: $surface-contrast-color;
+	}
+}
+
+.typography--color-textPrimary {
+	color: $text-primary-color;
+}
+
+.typography--no-wrap {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.typography--text-transform-uppercase {
+	text-transform: uppercase;
+}
+
+.typography--text-transform-lowercase {
+	text-transform: lowercase;
+}
+
+.typography--text-transform-capitalize {
+	text-transform: capitalize;
+}

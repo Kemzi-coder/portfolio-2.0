@@ -1,0 +1,30 @@
+@import "@/app/vars.module";
+
+.textarea {
+	resize: none;
+
+	font-weight: 500;
+	padding-bottom: $spacing-md;
+	background-color: transparent;
+	border-bottom: 1px solid $text-primary-color;
+	color: $secondary-main-color;
+	font-size: $font-size-md;
+	transition: border-color $transition-main;
+
+	&.input--invalid {
+		border-color: $danger-main-color;
+	}
+
+	&::placeholder {
+		color: $text-primary-color;
+		opacity: 1;
+	}
+
+	&:focus::placeholder {
+		color: transparent;
+	}
+
+	&:focus {
+		border-color: $secondary-main-color;
+	}
+}
