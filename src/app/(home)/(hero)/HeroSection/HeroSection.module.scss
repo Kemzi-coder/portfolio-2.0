@@ -1,0 +1,46 @@
+@import "@/app/vars.module";
+
+.section {
+	height: 100vh;
+	background: linear-gradient(180deg, #222127 0%, #151419 100%);
+}
+
+.inner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.content {
+	text-align: center;
+	max-width: 720px;
+}
+
+.title {
+	margin-bottom: $spacing-xl;
+}
+
+.subtitle {
+	margin-bottom: $spacing-xxxl;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: $spacing-xl;
+}
+
+.bottom-left-block {
+	position: absolute;
+	bottom: $spacing-xl;
+	left: 0;
+}
+
+.bottom-center-block {
+	position: absolute;
+	bottom: $spacing-xl;
+	left: 50%;
+	transform: translateX(-50%);
+}

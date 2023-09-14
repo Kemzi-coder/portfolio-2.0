@@ -1,7 +1,7 @@
-import "normalize.css";
-import "./globals.scss";
 import type {Metadata} from "next";
 import {Raleway} from "next/font/google";
+import "./globals.scss";
+import Header from "./(header)";
 
 const raleway = Raleway({subsets: ["latin", "cyrillic"]});
 
@@ -13,7 +13,10 @@ export const metadata: Metadata = {
 const RootLayout = ({children}: {children: React.ReactNode}) => {
 	return (
 		<html lang="en">
-			<body className={raleway.className}>{children}</body>
+			<body className={raleway.className}>
+				<Header />
+				{children}
+			</body>
 		</html>
 	);
 };

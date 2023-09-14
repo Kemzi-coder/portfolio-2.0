@@ -22,11 +22,7 @@ const Button = forwardRef<HTMLButtonElement, Props>(
 				className={classNames(styles.button, classNameByVariant, className)}
 				type="button"
 				{...rest}>
-				<Typography
-					color="primary"
-					colorVariant="contrast"
-					variant="button"
-					noWrap>
+				<Typography color="inherit" variant="button" noWrap>
 					{children}
 				</Typography>
 			</button>

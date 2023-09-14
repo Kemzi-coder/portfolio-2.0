@@ -1,0 +1,38 @@
+@import "@/app/vars.module";
+
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: $spacing-xl;
+	z-index: 999;
+}
+
+.inner {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: "left center right";
+	align-items: center;
+	gap: $spacing-xl;
+}
+
+.block--left {
+	grid-area: left;
+}
+
+.block--center {
+	grid-area: center;
+	justify-self: center;
+}
+
+.block--right {
+	grid-area: right;
+	justify-self: end;
+}
+
+.social-links {
+	display: flex;
+	align-items: center;
+	gap: $spacing-xl;
+}

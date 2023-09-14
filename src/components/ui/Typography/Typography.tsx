@@ -2,7 +2,13 @@ import classNames from "classnames";
 import {ElementType, HTMLAttributes, forwardRef} from "react";
 import styles from "./Typography.module.scss";
 
-type Color = "primary" | "secondary" | "textPrimary" | "surface";
+type Color =
+	| "primary"
+	| "secondary"
+	| "textPrimary"
+	| "surface"
+	| "background"
+	| "inherit";
 type ColorVariant = "main" | "contrast";
 type Variant =
 	| "h1"
@@ -22,6 +28,7 @@ type TextTransform = "uppercase" | "lowercase" | "capitalize";
 
 interface Props extends HTMLAttributes<HTMLElement> {
 	color?: Color;
+	as?: ElementType;
 	colorVariant?: ColorVariant;
 	variant?: Variant;
 	noWrap?: boolean;
@@ -51,6 +58,7 @@ const Typography = forwardRef<HTMLElement, Props>(
 			className,
 			noWrap,
 			textTransform,
+			as,
 			variant = "body1",
 			color = "textPrimary",
 			colorVariant = "main",
@@ -58,22 +66,21 @@ const Typography = forwardRef<HTMLElement, Props>(
 		},
 		ref
 	) => {
-		const Component = variant ? variantToElementMapping[variant] : "span";
+		const Component = as || variantToElementMapping[variant] || "p";
+
+		const styleClassNames = {
+			[styles["typography--no-wrap"]]: noWrap,
+			[styles[`typography--text-transform-${textTransform}`]]: textTransform,
+			[styles[`typography--variant-${variant}`]]: variant,
+			[styles[`typography--color-${color}-${colorVariant}`]]:
+				color && color !== "inherit",
+			[styles["typography--color-inherit"]]: color === "inherit"
+		};
 
 		return (
 			<Component
 				ref={ref}
-				className={classNames(
-					{
-						[styles["typography--no-wrap"]]: noWrap,
-						[styles[`typography--text-transform-${textTransform}`]]:
-							textTransform,
-						[styles[`typography--variant-${variant}`]]: variant,
-						[styles[`typography--color-${color}`]]: color,
-						[styles[`typography--color-variant-${colorVariant}`]]: colorVariant
-					},
-					className
-				)}
+				className={classNames(styleClassNames, className)}
 				{...rest}>
 				{children}
 			</Component>

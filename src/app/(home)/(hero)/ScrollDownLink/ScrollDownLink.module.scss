@@ -1,0 +1,43 @@
+@import "@/app/vars.module";
+
+@keyframes slide-down {
+	0% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		top: 60%;
+	}
+}
+
+.text {
+	margin-bottom: $spacing-md;
+}
+
+.icon {
+	position: relative;
+	width: 35px;
+	height: 58px;
+	border-radius: $border-radius-full;
+	border: 4px solid $text-primary-main-color;
+	margin: 0 auto;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 4px;
+		height: 12px;
+		background: $text-primary-main-color;
+		border-radius: $border-radius-full;
+		animation: 2s slide-down ease-in-out infinite;
+	}
+}

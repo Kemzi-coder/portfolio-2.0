@@ -20,8 +20,9 @@ const ButtonLink = forwardRef<HTMLAnchorElement, Props>(
 			<a
 				ref={ref}
 				className={classNames(styles.link, classNameByVariant, className)}
+				rel="noopener noreferrer"
 				{...rest}>
-				<Typography color="primary" colorVariant="contrast" variant="button">
+				<Typography color="inherit" variant="button">
 					{children}
 				</Typography>
 			</a>

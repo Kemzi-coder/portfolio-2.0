@@ -1,0 +1,10 @@
+@import "@/app/vars.module";
+
+.button {
+	background: transparent;
+	color: $background-contrast-color;
+}
+
+.button--active {
+	color: $primary-main-color;
+}

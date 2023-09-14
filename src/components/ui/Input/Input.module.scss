@@ -4,7 +4,7 @@
 	font-weight: 500;
 	padding-bottom: $spacing-md;
 	background-color: transparent;
-	border-bottom: 1px solid $text-primary-color;
+	border-bottom: 1px solid $text-primary-main-color;
 	color: $secondary-main-color;
 	font-size: $font-size-md;
 	transition: border-color $transition-main;
@@ -14,7 +14,7 @@
 	}
 
 	&::placeholder {
-		color: $text-primary-color;
+		color: $text-primary-main-color;
 		opacity: 1;
 	}
 

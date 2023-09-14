@@ -27,7 +27,7 @@
 
 .typography--variant-h6 {
 	font-size: $font-size-lg;
-	font-weight: 700;
+	font-weight: 500;
 }
 
 .typography--variant-subheading1 {
@@ -65,32 +65,43 @@
 	font-weight: 600;
 }
 
-.typography--color-primary {
+.typography--color-primary-main {
 	color: $primary-main-color;
-
-	&.typography--color-variant-contrast {
-		color: $primary-contrast-color;
-	}
+}
+.typography--color-primary-contrast {
+	color: $primary-contrast-color;
 }
 
-.typography--color-secondary {
+.typography--color-secondary-main {
 	color: $secondary-main-color;
-
-	&.typography--color-variant-contrast {
-		color: $secondary-contrast-color;
-	}
+}
+.typography--color-secondary-contrast {
+	color: $secondary-contrast-color;
 }
 
-.typography--color-surface {
+.typography--color-surface-main {
 	color: $surface-main-color;
-
-	&.typography--color-variant-contrast {
-		color: $surface-contrast-color;
-	}
+}
+.typography--color-surface-contrast {
+	color: $surface-contrast-color;
 }
 
-.typography--color-textPrimary {
-	color: $text-primary-color;
+.typography--color-background-main {
+	color: $background-main-color;
+}
+.typography--color-background-contrast {
+	color: $background-contrast-color;
+}
+
+.typography--color-textPrimary-main {
+	color: $text-primary-main-color;
+}
+.typography--color-textPrimary-contrast {
+	color: $text-primary-contrast-color;
+}
+
+.typography--color-inherit {
+	color: inherit;
 }
 
 .typography--no-wrap {

@@ -1,15 +1,14 @@
 import classNames from "classnames";
-import Link from "next/link";
-import {ComponentProps, forwardRef} from "react";
+import {AnchorHTMLAttributes, forwardRef} from "react";
 import Typography from "../../Typography/Typography";
 import styles from "./NavbarItem.module.scss";
 
-interface Props extends ComponentProps<typeof Link> {}
+interface Props extends AnchorHTMLAttributes<HTMLAnchorElement> {}
 
 const NavbarItem = forwardRef<HTMLAnchorElement, Props>(
 	({className, children, ...rest}, ref) => {
 		return (
-			<Link ref={ref} className={classNames(styles.link, className)} {...rest}>
+			<a ref={ref} className={classNames(styles.link, className)} {...rest}>
 				<Typography
 					className={styles.text}
 					color="secondary"
@@ -17,7 +16,7 @@ const NavbarItem = forwardRef<HTMLAnchorElement, Props>(
 					textTransform="capitalize">
 					{children}
 				</Typography>
-			</Link>
+			</a>
 		);
 	}
 );

@@ -1,0 +1,9 @@
+@import "@/app/vars.module";
+
+.container {
+	position: relative;
+	max-width: calc(1440px + ($spacing-md * 2));
+	margin: 0 auto;
+	padding: 0 $spacing-md;
+	height: 100%;
+}
