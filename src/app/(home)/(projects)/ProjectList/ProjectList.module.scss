@@ -1,0 +1,7 @@
+@import "@/app/vars.module";
+
+.list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(380px, calc(33.333% - $spacing-lg)) );
+	gap: $spacing-lg;
+}

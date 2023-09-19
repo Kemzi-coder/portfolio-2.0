@@ -1,0 +1,42 @@
+@import "@/app/vars.module";
+
+.card {
+	position: relative;
+	min-width: 380px;
+	max-width: 500px;
+	min-height: 300px;
+	border: 1px solid $surface-main-color;
+	border-radius: $border-radius-main;
+	overflow: hidden;
+
+	&:hover .content {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: left top;
+}
+
+.title {
+	margin-bottom: $spacing-sm;
+}
+
+.content {
+	background: rgba($background-main-color, 0.7);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: $spacing-lg $spacing-md;
+	opacity: 0;
+	visibility: hidden;
+	transition:
+		opacity $transition-main,
+		visibility $transition-main;
+}

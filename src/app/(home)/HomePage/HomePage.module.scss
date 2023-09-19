@@ -1,0 +1,23 @@
+@import "@/app/vars.module";
+
+.main {
+	position: relative;
+	overflow: hidden;
+}
+
+.sections-wrapper {
+	background: $background-main-color url("/images/section-bg.svg");
+	background-size: cover;
+	background-position: center;
+}
+
+.sections {
+	position: relative;
+	z-index: 5;
+}
+
+.circle {
+	position: absolute;
+	right: -300px;
+	bottom: 0;
+}

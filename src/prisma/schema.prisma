@@ -18,8 +18,9 @@ model Project {
   description    String
   url            String           @unique
   repoUrl        String           @unique
+  previewImage   String?
   startDate      DateTime
-  endDate        DateTime
+  endDate        DateTime?
   createdAt      DateTime         @default(now())
   ProjectsSkills ProjectsSkills[]
 }

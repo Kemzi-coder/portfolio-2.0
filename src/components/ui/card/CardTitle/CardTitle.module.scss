@@ -1,0 +1,6 @@
+@import "@/app/vars.module";
+
+.title {
+	color: $surface-contrast-color;
+	transition: color $transition-main;
+}

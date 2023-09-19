@@ -22,7 +22,8 @@ const Tab: ReactTabsFunctionComponent<TabProps> = ({
 				color="primary"
 				colorVariant="contrast"
 				textTransform="uppercase"
-				variant="tab">
+				variant="tab"
+				noWrap>
 				{children}
 			</Typography>
 		</ReactTab>

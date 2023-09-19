@@ -1,11 +1,21 @@
-import React, {HTMLAttributes, forwardRef} from "react";
-import Typography from "../../Typography/Typography";
+import {forwardRef} from "react";
+import Typography, {TypographyProps} from "../../Typography/Typography";
+import classNames from "classnames";
+import styles from "./CardDescription.module.scss";
 
-interface Props extends HTMLAttributes<HTMLParagraphElement> {}
+interface Props extends TypographyProps {}
 
 const CardDescription = forwardRef<HTMLParagraphElement, Props>(
-	({children}, ref) => {
-		return <Typography ref={ref}>{children}</Typography>;
+	({children, className, ...rest}, ref) => {
+		return (
+			<Typography
+				ref={ref}
+				className={classNames(styles.description, className)}
+				color="inherit"
+				{...rest}>
+				{children}
+			</Typography>
+		);
 	}
 );
 CardDescription.displayName = "CardDescription";

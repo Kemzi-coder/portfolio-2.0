@@ -8,6 +8,8 @@ type Color =
 	| "textPrimary"
 	| "surface"
 	| "background"
+	| "success"
+	| "danger"
 	| "inherit";
 type ColorVariant = "main" | "contrast";
 type Variant =

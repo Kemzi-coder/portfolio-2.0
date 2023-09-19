@@ -1,12 +1,7 @@
-import {HeroSection, ProjectsSection} from "./(home)";
+import HomePage from "./(home)";
 
 const Home = () => {
-	return (
-		<main>
-			<HeroSection />
-			<ProjectsSection />
-		</main>
-	);
+	return <HomePage />;
 };
 
 export default Home;

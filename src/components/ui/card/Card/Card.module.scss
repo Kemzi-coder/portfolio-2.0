@@ -3,8 +3,9 @@
 .card {
 	text-align: center;
 	background-color: $surface-main-color;
-	padding: $spacing-xxl;
+	padding: $spacing-mega $spacing-xxl;
 	transition: background-color $transition-main;
+	border-radius: $border-radius-main;
 
 	&:hover {
 		color: $primary-contrast-color;

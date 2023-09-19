@@ -1,6 +1,7 @@
 @import "@/app/vars.module";
 
 .input {
+	width: 100%;
 	font-weight: 500;
 	padding-bottom: $spacing-md;
 	background-color: transparent;
@@ -11,10 +12,14 @@
 
 	&.input--invalid {
 		border-color: $danger-main-color;
+
+		&:focus {
+			border-color: $danger-main-color;
+		}
 	}
 
 	&::placeholder {
-		color: $text-primary-main-color;
+		color: darken($text-primary-main-color, 20%);
 		opacity: 1;
 	}
 

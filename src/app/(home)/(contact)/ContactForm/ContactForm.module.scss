@@ -1,0 +1,18 @@
+@import "@/app/vars.module";
+
+.form {
+	max-width: 500px;
+}
+
+.fields {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing-lg;
+	margin-bottom: $spacing-xl;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	gap: $spacing-lg;
+}

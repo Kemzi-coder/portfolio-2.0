@@ -1,0 +1,18 @@
+@import "@/app/vars.module";
+
+.title {
+	position: relative;
+  padding-bottom: $spacing-lg;
+
+	&::after {
+		content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 140px;
+    height: 2px;
+    background: $primary-main-color;
+	}
+}

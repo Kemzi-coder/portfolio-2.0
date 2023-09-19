@@ -1,16 +1,18 @@
 import {HTMLAttributes, forwardRef} from "react";
 import Typography from "../../Typography/Typography";
+import styles from "./CardTitle.module.scss";
+import classNames from "classnames";
 
 interface Props extends Omit<HTMLAttributes<HTMLHeadingElement>, "color"> {}
 
 const CardTitle = forwardRef<HTMLHeadingElement, Props>(
-	({children, ...rest}, ref) => {
+	({children, className, ...rest}, ref) => {
 		return (
 			<Typography
 				ref={ref}
+				className={classNames(styles.title, className)}
+				color="inherit"
 				variant="h3"
-				color="surface"
-				colorVariant="contrast"
 				{...rest}>
 				{children}
 			</Typography>

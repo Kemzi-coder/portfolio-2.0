@@ -1,0 +1,22 @@
+@import "@/app/vars.module";
+
+.label {
+	display: block;
+
+	&:focus-within .text {
+		color: $secondary-main-color;
+	}
+}
+
+.text {
+	display: block;
+	margin-bottom: $spacing-sm;
+	transition: color $transition-main;
+}
+
+.error {
+	display: block;
+	margin-top: $spacing-sm;
+	font-size: $font-size-sm;
+	color: $danger-main-color;
+}

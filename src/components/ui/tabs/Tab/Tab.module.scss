@@ -1,32 +1,16 @@
 @import "@/app/vars.module";
 
 .tab {
-	position: relative;
 	padding: $spacing-md;
 	width: 50%;
 	cursor: pointer;
 	text-align: center;
+	transition: background-color $transition-main;
 	border-radius: $border-radius-full;
-	z-index: 5;
-
-	&::before {
-		content: "";
-		display: block;
-		position: absolute;
-		top: -$spacing-xs;
-		bottom: -$spacing-xs;
-		left: -$spacing-xs;
-		right: -$spacing-xs;
-		border-radius: $border-radius-full;
-		background-color: $primary-main-color;
-		opacity: 0;
-		transition: opacity $transition-main;
-		z-index: -1;
-	}
 }
 
-.tab--selected::before {
-	opacity: 1;
+.tab--selected {
+	background-color: $primary-main-color;
 }
 
 .tab--disabled {

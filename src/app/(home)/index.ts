@@ -1,4 +1,3 @@
-import HeroSection from "./(hero)";
-import ProjectsSection from "./(projects)";
+import HomePage from "./HomePage/HomePage";
 
-export {HeroSection, ProjectsSection};
+export default HomePage;

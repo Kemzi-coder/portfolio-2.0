@@ -2,14 +2,20 @@ import classNames from "classnames";
 import {TextareaHTMLAttributes, forwardRef} from "react";
 import styles from "./Textarea.module.scss";
 
-interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {}
+interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+	isInvalid?: boolean;
+}
 
 const Textarea = forwardRef<HTMLTextAreaElement, Props>(
-	({className, ...rest}, ref) => {
+	({className, isInvalid, ...rest}, ref) => {
 		return (
 			<textarea
 				ref={ref}
-				className={classNames(styles.textarea, className)}
+				className={classNames(
+					styles.textarea,
+					{[styles["textarea--invalid"]]: isInvalid},
+					className
+				)}
 				{...rest}
 			/>
 		);

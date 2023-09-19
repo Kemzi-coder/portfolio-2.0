@@ -2,14 +2,20 @@ import classNames from "classnames";
 import React, {InputHTMLAttributes, forwardRef} from "react";
 import styles from "./Input.module.scss";
 
-interface Props extends InputHTMLAttributes<HTMLInputElement> {}
+interface Props extends InputHTMLAttributes<HTMLInputElement> {
+	isInvalid?: boolean;
+}
 
 const Input = forwardRef<HTMLInputElement, Props>(
-	({className, ...rest}, ref) => {
+	({className, isInvalid, ...rest}, ref) => {
 		return (
 			<input
 				ref={ref}
-				className={classNames(styles.input, className)}
+				className={classNames(
+					styles.input,
+					{[styles["input--invalid"]]: isInvalid},
+					className
+				)}
 				{...rest}
 			/>
 		);

@@ -43,4 +43,5 @@ const sendContactMail = async ({
 	});
 };
 
+export type {ContactMailInfo};
 export {sendContactMail};
