@@ -7,3 +7,27 @@
 .title {
 	margin-bottom: $spacing-md;
 }
+
+@media screen and (max-width: $tablet-width) {
+	.image {
+		margin-bottom: $spacing-lg;
+		width: 80px;
+		height: 80px;
+	}
+
+	.title {
+		margin-bottom: $spacing-sm;
+	}
+}
+
+@media screen and (max-width: $phone-width) {
+	.image {
+		margin-bottom: $spacing-md;
+		width: 60px;
+		height: 60px;
+	}
+
+	.title {
+		margin-bottom: $spacing-xs;
+	}
+}

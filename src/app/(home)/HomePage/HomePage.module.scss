@@ -21,3 +21,9 @@
 	right: -300px;
 	bottom: 0;
 }
+
+@media screen and (max-width: $sm-desktop-width) {
+	.circle {
+		display: none;
+	}
+}

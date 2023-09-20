@@ -1,0 +1,13 @@
+@import "@/app/vars.module";
+
+.menu {
+	background-color: $background-main-color;
+	padding: $spacing-md;
+	border-radius: $border-radius-main;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing-lg;
+}

@@ -3,3 +3,21 @@
 .section {
 	padding: $spacing-ultramega 0;
 }
+
+@media screen and (max-width: $desktop-width) {
+	.section {
+		padding: $spacing-mega 0;
+	}
+}
+
+@media screen and (max-width: $tablet-width) {
+	.section {
+		padding: $spacing-xxxl 0;
+	}
+}
+
+@media screen and (max-width: $phone-width) {
+	.section {
+		padding: $spacing-xxl 0;
+	}
+}

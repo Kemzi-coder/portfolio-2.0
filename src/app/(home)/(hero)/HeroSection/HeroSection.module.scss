@@ -44,3 +44,29 @@
 	left: 50%;
 	transform: translateX(-50%);
 }
+
+@media screen and (max-width: $tablet-width) {
+	.bottom-left-block,
+	.bottom-center-block {
+		bottom: $spacing-lg;
+	}
+}
+
+@media screen and (max-width: $phone-width) {
+	.bottom-left-block,
+	.bottom-center-block {
+		bottom: $spacing-md;
+	}
+
+	.title {
+		margin-bottom: $spacing-md;
+	}
+
+	.subtitle {
+		margin-bottom: $spacing-xxl;
+	}
+
+	.buttons {
+		gap: $spacing-lg;
+	}
+}

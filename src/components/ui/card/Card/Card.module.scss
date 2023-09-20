@@ -12,3 +12,15 @@
 		background-color: $primary-main-color;
 	}
 }
+
+@media screen and (max-width: $tablet-width) {
+	.card {
+		padding: $spacing-xxxl $spacing-xl;
+	}
+}
+
+@media screen and (max-width: $phone-width) {
+	.card {
+		padding: $spacing-xxl $spacing-lg;
+	}
+}

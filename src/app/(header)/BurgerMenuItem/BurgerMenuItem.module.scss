@@ -1,0 +1,9 @@
+@import "@/app/vars.module";
+
+.text {
+	transition: color $transition-main;
+}
+
+.link:hover .text {
+	color: $primary-main-color;
+}

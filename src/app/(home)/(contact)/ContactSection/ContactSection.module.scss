@@ -11,3 +11,27 @@
 .form {
 	margin-left: $spacing-sm;
 }
+
+@media screen and (max-width: $tablet-width) {
+	.title {
+		margin-bottom: $spacing-md;
+	}
+
+	.subtitle {
+		margin-bottom: $spacing-xxl;
+	}
+}
+
+@media screen and (max-width: $phone-width) {
+	.title {
+		margin-bottom: $spacing-sm;
+	}
+
+	.subtitle {
+		margin-bottom: $spacing-xl;
+	}
+
+	.form {
+		margin-left: $spacing-xs;
+	}
+}

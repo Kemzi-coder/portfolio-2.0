@@ -1,7 +1,7 @@
 "use client";
 
 import React, {FC} from "react";
-import {Tab, TabList, TabPanel, Tabs} from "@/components/ui";
+import {Tab, TabList, TabPanel, Tabs, Typography} from "@/components/ui";
 import ProjectList from "../ProjectList/ProjectList";
 import {Project, ProjectCategory} from "@prisma/client";
 
@@ -12,11 +12,7 @@ interface Props {
 
 const ProjectTabs: FC<Props> = ({projects, categories}) => {
 	if (categories.length === 0) {
-		return (
-			<div>
-				<p>No project categories to be displayed.</p>
-			</div>
-		);
+		return <Typography>No project categories to be displayed.</Typography>;
 	}
 
 	return (

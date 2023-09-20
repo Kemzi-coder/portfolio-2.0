@@ -2,6 +2,7 @@ import {forwardRef} from "react";
 import Input, {InputProps} from "../Input/Input";
 import Textarea, {TextareaProps} from "../Textarea/Textarea";
 import styles from "./TextField.module.scss";
+import Typography from "../Typography/Typography";
 
 interface BaseProps {
 	error?: string;
@@ -32,9 +33,19 @@ const TextField = forwardRef<any, Props>(
 
 		return (
 			<label className={styles.label}>
-				<span className={styles.text}>{label}</span>
+				<Typography className={styles.text} as="span">
+					{label}
+				</Typography>
 				{elementJSX}
-				{error ? <span className={styles.error}>{error}</span> : null}
+				{error ? (
+					<Typography
+						className={styles.error}
+						color="danger"
+						variant="body2"
+						as="span">
+						{error}
+					</Typography>
+				) : null}
 			</label>
 		);
 	}

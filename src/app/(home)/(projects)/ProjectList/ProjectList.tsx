@@ -1,4 +1,5 @@
 import {ProjectCard} from "@/components";
+import {Typography} from "@/components/ui";
 import {Project} from "@prisma/client";
 import {FC} from "react";
 import styles from "./ProjectList.module.scss";
@@ -9,11 +10,7 @@ interface Props {
 
 const ProjectList: FC<Props> = ({projects}) => {
 	if (projects.length === 0) {
-		return (
-			<div>
-				<p>No projects yet.</p>
-			</div>
-		);
+		return <Typography>No projects yet.</Typography>;
 	}
 
 	return (

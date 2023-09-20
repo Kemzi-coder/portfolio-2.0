@@ -1,0 +1,39 @@
+@import "@/app/vars.module";
+
+.button {
+	display: block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+	background: transparent;
+}
+
+.icon {
+	transition: transform $transition-main;
+}
+
+.line {
+	fill: none;
+	transition:
+		stroke-dasharray $transition-main,
+		stroke-dashoffset $transition-main;
+	stroke: $secondary-main-color;
+	stroke-width: 5.5;
+	stroke-linecap: round;
+}
+
+.line--top,
+.line--bottom {
+	stroke-dasharray: 40 121;
+}
+
+.button--active {
+	.icon {
+		transform: rotate(45deg);
+	}
+
+	.line--top,
+	.line--bottom {
+		stroke-dashoffset: -68px;
+	}
+}

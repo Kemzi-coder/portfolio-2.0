@@ -4,3 +4,15 @@
 	text-align: center;
 	margin-bottom: $spacing-xxl;
 }
+
+@media screen and (max-width: $tablet-width) {
+	.title {
+		margin-bottom: $spacing-xl;
+	}
+}
+
+@media screen and (max-width: $phone-width) {
+	.title {
+		margin-bottom: $spacing-lg;
+	}
+}

@@ -3,16 +3,44 @@
 .typography--variant-h1 {
 	font-size: $font-size-ultramega;
 	font-weight: 700;
+
+	@media screen and (max-width: $tablet-width) {
+		font-size: $font-size-mega;
+	}
+
+	@media screen and (max-width: $sm-tablet-width) {
+		font-size: $font-size-xxxl;
+	}
+
+	@media screen and (max-width: $phone-width) {
+		font-size: $font-size-xxl;
+	}
 }
 
 .typography--variant-h2 {
 	font-size: $font-size-mega;
 	font-weight: 700;
+
+	@media screen and (max-width: $tablet-width) {
+		font-size: $font-size-xxxl;
+	}
+
+	@media screen and (max-width: $phone-width) {
+		font-size: $font-size-xxl;
+	}
 }
 
 .typography--variant-h3 {
 	font-size: $font-size-xxxl;
 	font-weight: 700;
+
+	@media screen and (max-width: $tablet-width) {
+		font-size: $font-size-xxl;
+	}
+
+	@media screen and (max-width: $phone-width) {
+		font-size: $font-size-xl;
+	}
 }
 
 .typography--variant-h4 {
@@ -28,6 +56,10 @@
 .typography--variant-h6 {
 	font-size: $font-size-lg;
 	font-weight: 500;
+
+	@media screen and (max-width: $phone-width) {
+		font-size: $font-size-md;
+	}
 }
 
 .typography--variant-subheading1 {
@@ -43,6 +75,10 @@
 .typography--variant-body1 {
 	font-size: $font-size-md;
 	font-weight: 500;
+
+	@media screen and (max-width: $phone-width) {
+		font-size: $font-size-sm;
+	}
 }
 
 .typography--variant-body2 {
@@ -53,16 +89,28 @@
 .typography--variant-button {
 	font-size: $font-size-md;
 	font-weight: 600;
+
+	@media screen and (max-width: $phone-width) {
+		font-size: $font-size-sm;
+	}
 }
 
 .typography--variant-link {
 	font-size: $font-size-md;
 	font-weight: 600;
+
+	@media screen and (max-width: $phone-width) {
+		font-size: $font-size-sm;
+	}
 }
 
 .typography--variant-tab {
 	font-size: $font-size-md;
 	font-weight: 600;
+
+	@media screen and (max-width: $phone-width) {
+		font-size: $font-size-sm;
+	}
 }
 
 .typography--color-primary-main {

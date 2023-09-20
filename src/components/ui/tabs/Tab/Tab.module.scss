@@ -2,7 +2,7 @@
 
 .tab {
 	padding: $spacing-md;
-	width: 50%;
+	width: 100%;
 	cursor: pointer;
 	text-align: center;
 	transition: background-color $transition-main;
@@ -15,4 +15,10 @@
 
 .tab--disabled {
 	cursor: default;
+}
+
+@media screen and (max-width: $phone-width) {
+	.tab {
+		padding: $spacing-sm;
+	}
 }
