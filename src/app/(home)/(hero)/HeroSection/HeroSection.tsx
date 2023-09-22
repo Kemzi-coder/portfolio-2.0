@@ -34,9 +34,10 @@ const HeroSection = () => {
 						</div>
 					</div>
 				</div>
-				<div className={styles["bottom-left-block"]}>
+				{/* TODO: Implement internationalization */}
+				{/* <div className={styles["bottom-left-block"]}>
 					<LanguageButtons />
-				</div>
+				</div> */}
 				<div className={styles["bottom-center-block"]}>
 					<ScrollDownLink href={`#${SectionId.PROJECTS}`} />
 				</div>
