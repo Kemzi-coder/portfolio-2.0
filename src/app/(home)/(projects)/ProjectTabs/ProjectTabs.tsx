@@ -1,9 +1,11 @@
 "use client";
 
-import React, {FC} from "react";
 import {Tab, TabList, TabPanel, Tabs, Typography} from "@/components/ui";
-import ProjectList from "../ProjectList/ProjectList";
 import {Project, ProjectCategory} from "@prisma/client";
+import {FC} from "react";
+import ProjectList from "../ProjectList/ProjectList";
+import ProjectSlider from "../ProjectSlider/ProjectSlider";
+import styles from "./ProjectTabs.module.scss";
 
 interface Props {
 	projects: Project[];
@@ -28,7 +30,12 @@ const ProjectTabs: FC<Props> = ({projects, categories}) => {
 				);
 				return (
 					<TabPanel key={category.id}>
-						<ProjectList projects={categoryProjects} />
+						<div className={styles.list}>
+							<ProjectList projects={categoryProjects} />
+						</div>
+						<div className={styles.slider}>
+							<ProjectSlider projects={categoryProjects} />
+						</div>
 					</TabPanel>
 				);
 			})}

@@ -1,0 +1,15 @@
+@import "@/app/vars.module";
+
+.slider {
+	display: none;
+}
+
+@media screen and (max-width: $tablet-width) {
+	.list {
+		display: none;
+	}
+
+	.slider {
+		display: block;
+	}
+}

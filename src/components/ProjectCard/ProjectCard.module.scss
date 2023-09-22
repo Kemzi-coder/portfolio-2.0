@@ -1,8 +1,8 @@
 @import "@/app/vars.module";
 
 .card {
+	display: block;
 	position: relative;
-	max-width: 500px;
 	height: 300px;
 	border: 1px solid $surface-main-color;
 	border-radius: $border-radius-main;

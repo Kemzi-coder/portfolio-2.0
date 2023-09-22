@@ -9,5 +9,6 @@ export * from "./card";
 export * from "./navbar";
 export * from "./tabs";
 export * from "./section";
+export * from "./slider";
 export type {TypographyProps};
 export {Button, ButtonLink, Link, TextField, Typography, Container};
