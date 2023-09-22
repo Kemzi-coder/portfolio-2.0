@@ -2,18 +2,31 @@
 
 import {Logo} from "@/components";
 import {Container, Link, Navbar, NavbarItem} from "@/components/ui";
-import {SectionId} from "@/lib/constants";
+import {navItems} from "@/lib/data";
+import {useListenClickOutside} from "@/lib/hooks";
 import classNames from "classnames";
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import BurgerButton from "../BurgerButton/BurgerButton";
-import styles from "./Header.module.scss";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import BurgerMenuItem from "../BurgerMenuItem/BurgerMenuItem";
+import styles from "./Header.module.scss";
 
 const Header = () => {
 	const [menuIsOpen, setMenuIsOpen] = useState(false);
+	const burgerMenuRef = useRef(null);
 
-	const toggleMenuOpen = () => setMenuIsOpen(prev => !prev);
+	const toggleMenuIsOpen = () => setMenuIsOpen(prev => !prev);
+	const handleMenuClose = () => setMenuIsOpen(false);
+
+	useEffect(() => {
+		if (menuIsOpen) {
+			document.body.classList.add("body--lock");
+		} else {
+			document.body.classList.remove("body--lock");
+		}
+	}, [menuIsOpen]);
+
+	useListenClickOutside(burgerMenuRef, () => setMenuIsOpen(false));
 
 	return (
 		<header className={styles.header}>
@@ -24,15 +37,15 @@ const Header = () => {
 					</div>
 					<div className={classNames(styles.block, styles["block--center"])}>
 						<Navbar className={styles.navbar}>
-							<NavbarItem href={`#${SectionId.PROJECTS}`}>Projects</NavbarItem>
-							<NavbarItem href={`#${SectionId.BENEFITS}`}>Benefits</NavbarItem>
-							<NavbarItem href={`#${SectionId.CONTACT}`}>Contact</NavbarItem>
+							{navItems.map(navItem => (
+								<NavbarItem key={navItem.id} href={navItem.href}>
+									{navItem.text}
+								</NavbarItem>
+							))}
 						</Navbar>
-						<BurgerButton
-							className={styles["burger-button"]}
-							isActive={menuIsOpen}
-							onClick={toggleMenuOpen}
-						/>
+						<div className={styles["burger-button-wrapper"]}>
+							<BurgerButton isActive={menuIsOpen} onClick={toggleMenuIsOpen} />
+						</div>
 					</div>
 					<div className={classNames(styles.block, styles["block--right"])}>
 						<div className={styles["social-links"]}>
@@ -47,20 +60,21 @@ const Header = () => {
 						</div>
 					</div>
 				</div>
-				<BurgerMenu
-					className={classNames(styles["burger-menu"], {
-						[styles["burger-menu--active"]]: menuIsOpen
+				<div
+					className={classNames(styles["burger-menu-wrapper"], {
+						[styles["burger-menu-wrapper--open"]]: menuIsOpen
 					})}>
-					<BurgerMenuItem href={`#${SectionId.PROJECTS}`}>
-						Projects
-					</BurgerMenuItem>
-					<BurgerMenuItem href={`#${SectionId.BENEFITS}`}>
-						Benefits
-					</BurgerMenuItem>
-					<BurgerMenuItem href={`#${SectionId.CONTACT}`}>
-						Contact
-					</BurgerMenuItem>
-				</BurgerMenu>
+					<BurgerMenu ref={burgerMenuRef} className={styles["burger-menu"]}>
+						{navItems.map(navItem => (
+							<BurgerMenuItem
+								key={navItem.id}
+								onClick={handleMenuClose}
+								href={navItem.href}>
+								{navItem.text}
+							</BurgerMenuItem>
+						))}
+					</BurgerMenu>
+				</div>
 			</Container>
 		</header>
 	);

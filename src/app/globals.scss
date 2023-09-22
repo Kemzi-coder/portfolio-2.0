@@ -7,30 +7,19 @@
 	box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+* {
+	padding: 0;
 	margin: 0;
+	border: 0;
 }
 
 button {
 	cursor: pointer;
-	border: none;
-	padding: 0;
 }
 
 a {
 	text-decoration: none;
 	cursor: pointer;
-}
-
-input,
-textarea {
-	border: none;
 }
 
 ul li {
@@ -47,4 +36,8 @@ body {
 	letter-spacing: 0.2px;
 	color: $text-primary-main-color;
 	background-color: $background-main-color;
+}
+
+body.body--lock {
+	overflow: hidden;
 }

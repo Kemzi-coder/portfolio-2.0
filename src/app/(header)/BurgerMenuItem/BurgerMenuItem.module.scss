@@ -1,5 +1,10 @@
 @import "@/app/vars.module";
 
+.link {
+	display: inline-block;
+	padding: $spacing-md $spacing-lg;
+}
+
 .text {
 	transition: color $transition-main;
 }

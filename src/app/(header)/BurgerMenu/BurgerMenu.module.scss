@@ -2,12 +2,16 @@
 
 .menu {
 	background-color: $background-main-color;
-	padding: $spacing-md;
 	border-radius: $border-radius-main;
+	max-height: 50vh;
+	display: flex;
+	flex-direction: column;
 }
 
 .list {
 	display: flex;
 	flex-direction: column;
-	gap: $spacing-lg;
+	padding: $spacing-sm 0;
+	overflow-y: auto;
+	flex-grow: 1;
 }

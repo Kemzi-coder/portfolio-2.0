@@ -38,12 +38,28 @@
 	gap: $spacing-xl;
 }
 
-.burger-button {
+.burger-button-wrapper {
 	display: none;
+	position: relative;
+	z-index: 999;
+}
+
+.burger-menu-wrapper {
+	display: none;
+	position: fixed;
+	right: -100%;
+	top: 0;
+	z-index: 900;
+	opacity: 0;
+	visibility: hidden;
+	transition: all $transition-main;
 }
 
 .burger-menu {
-	display: none;
+	padding-top: $spacing-mega;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	border-bottom-right-radius: 0;
 }
 
 @media screen and (max-width: $tablet-width) {
@@ -68,24 +84,15 @@
 		justify-self: center;
 	}
 
-	.burger-button {
+	.burger-button-wrapper {
 		display: block;
-		z-index: 999;
 	}
 
-	.burger-menu {
+	.burger-menu-wrapper {
 		display: block;
-		position: fixed;
-		right: -100%;
-		top: 0;
-		z-index: 900;
-		opacity: 0;
-		visibility: hidden;
-		transition: all $transition-main;
-		padding-top: $spacing-ultramega;
 	}
 
-	.burger-menu--active {
+	.burger-menu-wrapper--open {
 		opacity: 1;
 		right: 0;
 		visibility: visible;
