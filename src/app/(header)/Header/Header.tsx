@@ -10,6 +10,7 @@ import BurgerButton from "../BurgerButton/BurgerButton";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import BurgerMenuItem from "../BurgerMenuItem/BurgerMenuItem";
 import styles from "./Header.module.scss";
+import NextLink from "next/link";
 
 const Header = () => {
 	const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -38,9 +39,13 @@ const Header = () => {
 					<div className={classNames(styles.block, styles["block--center"])}>
 						<Navbar className={styles.navbar}>
 							{navItems.map(navItem => (
-								<NavbarItem key={navItem.id} href={navItem.href}>
-									{navItem.text}
-								</NavbarItem>
+								<NextLink
+									key={navItem.id}
+									href={navItem.href}
+									passHref
+									legacyBehavior>
+									<NavbarItem>{navItem.text}</NavbarItem>
+								</NextLink>
 							))}
 						</Navbar>
 						<div className={styles["burger-button-wrapper"]}>

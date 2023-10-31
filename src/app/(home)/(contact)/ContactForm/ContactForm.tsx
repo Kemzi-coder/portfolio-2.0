@@ -1,7 +1,7 @@
 "use client";
 
 import {Button, ButtonLink, TextField} from "@/components/ui";
-import {SectionId} from "@/lib/constants";
+import {HomeSectionId} from "@/lib/constants";
 import {ContactMailInfo} from "@/lib/mail";
 import {FC, useState} from "react";
 import {SubmitHandler, useForm} from "react-hook-form";
@@ -103,7 +103,7 @@ const ContactForm: FC = () => {
 				<Button type="submit" disabled={isSubmitting}>
 					Send
 				</Button>
-				<ButtonLink href={`#${SectionId.HERO}`} variant="outline">
+				<ButtonLink href={`#${HomeSectionId.HERO}`} variant="outline">
 					To the top
 				</ButtonLink>
 			</div>

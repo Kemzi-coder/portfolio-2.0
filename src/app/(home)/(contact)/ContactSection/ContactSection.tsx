@@ -1,11 +1,11 @@
 import {Container, Section, Typography} from "@/components/ui";
-import {SectionId} from "@/lib/constants";
+import {HomeSectionId} from "@/lib/constants";
 import ContactForm from "../ContactForm/ContactForm";
 import styles from "./ContactSection.module.scss";
 
-const BenefitsSection = () => {
+const ContactSection = () => {
 	return (
-		<Section id={SectionId.CONTACT}>
+		<Section id={HomeSectionId.CONTACT}>
 			<Container>
 				<Typography
 					className={styles.title}
@@ -27,4 +27,4 @@ const BenefitsSection = () => {
 	);
 };
 
-export default BenefitsSection;
+export default ContactSection;

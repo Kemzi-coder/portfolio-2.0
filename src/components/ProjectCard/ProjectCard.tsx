@@ -3,6 +3,8 @@ import Image from "next/image";
 import {FC} from "react";
 import {Typography} from "../ui";
 import styles from "./ProjectCard.module.scss";
+import Link from "next/link";
+import {RouteName} from "@/lib/constants";
 
 interface Props {
 	project: Project;
@@ -15,11 +17,7 @@ const ProjectCard: FC<Props> = ({project}) => {
 		: "";
 
 	return (
-		<a
-			className={styles.card}
-			href={project.url}
-			rel="noreferrer noopener"
-			target="_blank">
+		<Link className={styles.card} href={`${RouteName.PROJECTS}/${project.id}`}>
 			<Image
 				fill
 				priority
@@ -34,7 +32,7 @@ const ProjectCard: FC<Props> = ({project}) => {
 				</Typography>
 				<Typography color="secondary">{project.description}</Typography>
 			</div>
-		</a>
+		</Link>
 	);
 };
 

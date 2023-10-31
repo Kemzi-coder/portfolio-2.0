@@ -9,9 +9,10 @@
 		"lint": "next lint",
 		"format": "prettier --check --ignore-path .gitignore .",
 		"format:fix": "prettier --write --ignore-path .gitignore .",
+		"prisma:migrate": "dotenv -e .env.local -- npx prisma migrate dev",
 		"prisma:generate": "dotenv -e .env.local -- npx prisma generate",
 		"prisma:db:seed": "dotenv -e .env.local -- npx prisma db seed",
-		"prisma:db:deploy": "npx prisma generate && npx prisma migrate deploy",
+		"prisma:db:deploy": "dotenv -e .env.local -- npx prisma migrate deploy",
 		"vercel-build": "npm run prisma:db:deploy && next build"
 	},
 	"prisma": {

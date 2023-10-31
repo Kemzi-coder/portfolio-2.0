@@ -4,6 +4,7 @@ import Link from "./Link/Link";
 import TextField from "./TextField/TextField";
 import Typography, {TypographyProps} from "./Typography/Typography";
 import Container from "./Container/Container";
+import ScrollDownLink from "./ScrollDownLink/ScrollDownLink";
 
 export * from "./card";
 export * from "./navbar";
@@ -11,4 +12,12 @@ export * from "./tabs";
 export * from "./section";
 export * from "./slider";
 export type {TypographyProps};
-export {Button, ButtonLink, Link, TextField, Typography, Container};
+export {
+	Button,
+	ButtonLink,
+	Link,
+	TextField,
+	Typography,
+	Container,
+	ScrollDownLink
+};

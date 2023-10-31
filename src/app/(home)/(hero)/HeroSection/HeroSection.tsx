@@ -1,12 +1,15 @@
-import {ButtonLink, Container, Typography} from "@/components/ui";
-import {SectionId} from "@/lib/constants";
-import LanguageButtons from "../LanguageButtons/LanguageButtons";
-import ScrollDownLink from "../ScrollDownLink/ScrollDownLink";
+import {
+	ButtonLink,
+	Container,
+	Typography,
+	ScrollDownLink
+} from "@/components/ui";
+import {HomeSectionId} from "@/lib/constants";
 import styles from "./HeroSection.module.scss";
 
 const HeroSection = () => {
 	return (
-		<section id={SectionId.HERO} className={styles.section}>
+		<section id={HomeSectionId.HERO} className={styles.section}>
 			<Container>
 				<div className={styles.inner}>
 					<div className={styles.content}>
@@ -22,7 +25,7 @@ const HeroSection = () => {
 							I am javascript developer and open to working with you.
 						</Typography>
 						<div className={styles.buttons}>
-							<ButtonLink href={`#${SectionId.PROJECTS}`}>
+							<ButtonLink href={`#${HomeSectionId.PROJECTS}`}>
 								Find out more
 							</ButtonLink>
 							<ButtonLink
@@ -39,7 +42,7 @@ const HeroSection = () => {
 					<LanguageButtons />
 				</div> */}
 				<div className={styles["bottom-center-block"]}>
-					<ScrollDownLink href={`#${SectionId.PROJECTS}`} />
+					<ScrollDownLink href={`#${HomeSectionId.PROJECTS}`} />
 				</div>
 			</Container>
 		</section>

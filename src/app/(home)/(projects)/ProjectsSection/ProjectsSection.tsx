@@ -1,5 +1,5 @@
 import {Container, Section, SectionTitle} from "@/components/ui";
-import {SectionId} from "@/lib/constants";
+import {HomeSectionId} from "@/lib/constants";
 import ProjectTabs from "../ProjectTabs/ProjectTabs";
 import styles from "./ProjectsSection.module.scss";
 import prisma from "@/prisma/client";
@@ -11,7 +11,7 @@ const ProjectsSection = async () => {
 	]);
 
 	return (
-		<Section id={SectionId.PROJECTS}>
+		<Section id={HomeSectionId.PROJECTS}>
 			<Container>
 				<SectionTitle className={styles.title}>Projects</SectionTitle>
 				<ProjectTabs projects={projects} categories={categories} />

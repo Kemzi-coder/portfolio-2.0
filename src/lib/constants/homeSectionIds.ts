@@ -1,8 +1,8 @@
-const SectionId = {
+const HomeSectionId = {
 	HERO: "hero",
 	PROJECTS: "projects",
 	BENEFITS: "benefits",
 	CONTACT: "contact"
 };
 
-export default SectionId;
+export default HomeSectionId;

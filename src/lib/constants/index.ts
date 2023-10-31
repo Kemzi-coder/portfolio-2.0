@@ -1,5 +1,6 @@
 import RouteName from "./routeNames";
-import SectionId from "./sectionIds";
+import HomeSectionId from "./homeSectionIds";
+import ProjectSectionId from "./projectSectionIds";
 import ScreenWidth from "./screenWidths";
 
-export {RouteName, SectionId, ScreenWidth};
+export {RouteName, HomeSectionId, ProjectSectionId, ScreenWidth};
